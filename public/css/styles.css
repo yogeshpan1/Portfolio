@@ -430,6 +430,9 @@ a:hover {
 .about-photo img {
   border-radius: 6px;
   border: 1px solid var(--line);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 24%;
 }
 
 /* red offset frame behind the photo */
@@ -535,8 +538,8 @@ a:hover {
 
 /* the web-slinger hangs above the grid */
 .webslinger {
-  width: 190px;
-  margin: 10px auto 6px;
+  width: 170px;
+  margin: -20px auto 0;
   transform-origin: top center;
   animation: sway 5.5s ease-in-out infinite;
 }
@@ -553,7 +556,14 @@ a:hover {
   stroke-width: 2;
 }
 
-.ws-body,
+.ws-limb {
+  fill: none;
+  stroke: var(--red);
+  stroke-width: 17;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .ws-head {
   fill: var(--red);
 }

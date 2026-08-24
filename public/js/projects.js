@@ -109,11 +109,11 @@ var JUNIOR_SERIES = [
 ];
 
 function initialsOf(name) {
-  return name
-    .split(/\s+/)
-    .map(function (w) { return w[0]; })
-    .join("")
-    .toUpperCase();
+  var words = name.split(/\s+/).filter(Boolean);
+  if (words.length > 1) {
+    return words.map(function (w) { return w[0]; }).join("").slice(0, 3).toUpperCase();
+  }
+  return name.slice(0, 2).toUpperCase();
 }
 
 function statusLabel(status) {
